@@ -8,7 +8,7 @@
 :root {
     --azul: rgb(7, 7, 129);
     --branco: #ffff;
-    --cinza-transp: #8b8a8ac0;
+    --cinza-transp: #8b8a8a8f;
     --preto: #141414d3;
 }
 
@@ -64,7 +64,10 @@ body header .menu {
 }
 
 .navegador li:hover {
-    color: inherit;
+    color: var(--azul);
+    background-color: var(--branco);
+    padding: 5px;
+    transition: 0.5s;
 }
 
 .navegador li:hover>.submenu {
@@ -75,20 +78,20 @@ body header .menu {
 .submenu2 {
     display: none;
     position: absolute;
-    top: calc(100% - 15px);
-    left: 150px;
-    z-index: 10;
-    background-color: var(--azul);
+    top: 30px;
+    left: 100%;
     text-align: center;
     width: 200px;
     padding: 15px;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .navegador .submenu li:hover>.submenu2 {
+    color: var(--branco);
+    background-color: var(--azul);
     display: block;
     position: absolute;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 body header .menu .imagem .logo {
@@ -170,12 +173,11 @@ body .box_destaques h2 {
 }
 
 .imagem4 {
-    width: 200px;
+    width: 240px;
     height: 170px;
     margin-top: 10px;
     position: relative;
     background-color: var(--azul);
-    margin-right: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -193,6 +195,11 @@ body .box_destaques h2 {
     font-size: 15px;
 }
 
+.box_destaques .descricao a{
+    text-wrap: nowrap;
+    color: var(--cinza-transp);
+}
+
 /*Rodape*/
 .rodape {
     width: 100%;
@@ -205,6 +212,7 @@ body .box_destaques h2 {
 
 .rodape .menu_rodape {
     margin: 0 auto;
+    margin-top: 30px;
     color: var(--cinza-transp);
     font-size: 15px;
     font-weight: bolder;
@@ -214,9 +222,16 @@ body .box_destaques h2 {
     margin-right: 10px;
 }
 
-body .rodape .menu_rodape p {
+.rodape .menu_rodape p {
     color: var(--branco);
     margin-top: 90px;
+}
+
+.rodape .menu_rodape span:hover {
+    background-color: var(--cinza-transp);
+    color: var(--branco);
+    padding: 5px;
+    transition: 0.3s;
 }
 
 /*Responsividade*/
